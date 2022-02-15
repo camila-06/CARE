@@ -8,12 +8,14 @@
 }
 
 body{
+    /* background-image: linear-gradient(to bottom, rgb(111,77,24), rgb(255, 232, 197)); */
     background-color: rgb(255, 232, 197);
     font-family: 'Mandali', sans-serif;
 }
 
 header{
-    background-color: rgb(213, 182, 134);
+    /* background-color: rgb(213, 182, 134); */
+    background-image: linear-gradient(to bottom, rgb(213, 182, 134), rgb(255, 232, 197));
     display: flex;
     justify-content: space-between;
     align-items: center;
