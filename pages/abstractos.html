@@ -6,38 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Care's Art</title> 
     <link rel="icon" href="../imagenes/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/estilos.css">
 </head>
 <body>
     <header>
-        <a href="../index.html"><img class="logo" src="../imagenes/logo.png" width="100px" alt="logo"></a>
-		<nav>
-			<ul>
-				<li><a href="../index.html"> Inicio</a></li>
-				<li><a href="acercade.html"> Acerca de</a></li>
-				<li><a href="abstractos.html"> Abstractos</a></li>
-                <li><a href="figurativos.html"> Figurativos</a></li>
-                <li><a href="contacto.html"> Contacto</a></li>
-			</ul>
-		</nav>
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html"><img src="../imagenes/logo.png" alt="Logo" style="width: 100px;" class="rounded-pill"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/acercade.html">Acerca de</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/abstractos.html">Abstractos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/figurativos.html">Figurativos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
 	</header>
     <main class="main">
         <h1 class="titulo">Abstractos</h1>
-        <!-- <img src="../imagenes/Abstracto/1.jpg" width="300px" alt="abstracto1">
-        <img src="../imagenes/Abstracto/11.jpg" width="580px" alt="abstracto11">
-        <img src="../imagenes/Abstracto/12.jpg" width="340px" alt="abstracto12">
-        <br>
-        <img src="../imagenes/Abstracto/2.jpg" width="300px" alt="abstracto2">
-        <img src="../imagenes/Abstracto/4.jpg" width="310px" alt="abstracto4">
-        <img src="../imagenes/Abstracto/8.jpg" width="580px" alt="abstracto8">
-        <br>
-        <img src="../imagenes/Abstracto/5.jpg" width="300px" alt="abstracto5">
-        <img src="../imagenes/Abstracto/6.jpg" width="300px" alt="abstracto6">
-        <img src="../imagenes/Abstracto/7.jpg" width="290px" alt="abstracto7">
-        <br>
-        <img src="../imagenes/Abstracto/3.jpg" width="300px" alt="abstracto3">
-        <img src="../imagenes/Abstracto/9.jpg" width="570px" alt="abstracto9">
-        <img src="../imagenes/Abstracto/10.jpg" width="300px" alt="abstracto10"> -->
         <div class="galeria">
             <div class="img abs-img1">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nostrum.</p>
@@ -82,5 +85,7 @@
         </ul>
         <p><small>Camila Caresani - Todos los derechos reservados</small></p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>

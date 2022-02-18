@@ -12,45 +12,62 @@ body{
     background-color: rgb(255, 232, 197);
     font-family: 'Mandali', sans-serif;
 }
-
 header{
-    /* background-color: rgb(213, 182, 134); */
-    background-image: linear-gradient(to bottom, rgb(213, 182, 134), rgb(255, 232, 197));
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    width: 100%;
+  height: 100px;
+  width: 100%;
 }
-header .logo{
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    margin: 10px;
+.container-fluid{
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  background-image: linear-gradient(to bottom, rgb(213, 182, 134), rgb(255, 232, 197));
 }
-header nav{
-    margin-right: 50px;
+.navbar{
+  padding: 0;
+  margin: 0;
+}
+.navbar-brand{
+  padding: 0;
+  margin: 0;
+}
+.nav-item{
+  padding: 10px;
+}
+.navbar-dark .navbar-nav .nav-link{
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  margin: 10px;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+  color: rgb(111, 77, 24);
+  font-weight: bold;
+  background-color: rgb(255, 232, 197);
+}
 
-}
-nav ul{
-  display: flex;
-  flex-wrap: wrap;
-
-}
-nav ul li{
-    list-style: none;
-    padding: 10px;
-}
-nav a{
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    padding: 5px 16px;
-}
-nav a:hover{
+@media (min-width: 0px) and (max-width: 767px){
+  #collapsibleNavbar{
+      background-color: rgb(255, 232, 197);
+      opacity: 95%;
+  }
+  .navbar-dark .navbar-nav .nav-link{
     color: rgb(111, 77, 24);
     font-weight: bold;
-    background-color: rgb(255, 232, 197);
+  }
+  .navbar-dark .navbar-nav .nav-link:hover{
+    color: rgb(255, 232, 197);
+    font-weight: bold;
+    background-color: rgb(111, 77, 24);
+  }
+  .nav-item{
+      align-self: center;
+  }
+}
+
+@media (min-width: 768px){
+  #collapsibleNavbar{
+      justify-content: flex-end;
+  }
 }
 main{
     height: min-content;
@@ -124,7 +141,17 @@ main{
     display: flex;
     align-self: center;
 }
-
+.inicio-carousel{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.carousel-item img{
+  border-radius: 0.9rem;
+  height: 70vh;
+}
 .contacto {
     text-align: center;
     font-size: 18px;
