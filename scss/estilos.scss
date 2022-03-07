@@ -429,60 +429,34 @@ footer a:hover{
     background-size: cover; }
 /* FIGURATIVO - FIN */
 /* ABSTRACTO - INICIO */
-.abs-img1 {
-    grid-area: img1;
-    background-image: url(../imagenes/Abstracto/1.jpg); 
-    background-position: center;
-    background-size: cover;}
-.abs-img2 { grid-area: img2;
-    background-image: url(../imagenes/Abstracto/12.jpg); 
-    background-position: center;
-    background-size: cover; }
-
-.abs-img3 { grid-area: img3;
-    background-image: url(../imagenes/Abstracto/3.jpg); 
-    background-position: center;
-    background-size: cover; }
-
-.abs-img9 { grid-area: img9;
-    background-image: url(../imagenes/Abstracto/15.jpeg); 
-    background-position: center;
-    background-size: cover; }
-
-.abs-img5 { grid-area: img5;
-    background-image: url(../imagenes/Abstracto/11.jpg); 
-    background-position: center;
-    background-size: cover; }
-
-.abs-img4 { grid-area: img4;
-    background-image: url(../imagenes/Abstracto/2.jpg); 
-    background-position: center;
-    background-size: cover; }
-
-.abs-img6 { grid-area: img6;
-    background-image: url(../imagenes/Abstracto/4.jpg); 
-    background-position: center;
-    background-size: cover; }
-
-.abs-img7 { grid-area: img7;
-    background-image: url(../imagenes/Abstracto/13.jpg); 
-    background-position: center;
-    background-size: cover; }
-
-.abs-img8 { grid-area: img8;
-    background-image: url(../imagenes/Abstracto/8.jpg); 
-    background-position: center;
-    background-size: cover; }
-
-.abs-img10 { grid-area: img10;
-    background-image: url(../imagenes/Abstracto/9.jpg); 
-    background-position: center;
-    background-size: cover; }
-
-.abs-img11 { grid-area: img11;
-    background-image: url(../imagenes/Abstracto/14.jpeg); 
-    background-position: center;
-    background-size: cover; }
+img{
+    max-width: 100%;}
+button img:hover {
+    opacity: 70%;}
+.galeria-abs{
+    padding-top: 30px;
+    padding-bottom: 80px;}
+    img{
+        width: 100%;
+        box-shadow: 3px 3px 3px #333;
+    }
+.btn-close{
+    background-image: url(../imagenes/closebutton.png);}
+.modal-content{
+    border: none;}
+.modal-body{
+    height: 80vh;
+    display: flex;
+    justify-content: center;}
+.modal-body .modal-img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;}
+.my-modal{
+    background-color: rgba(0, 0, 0, 0.85);}
+.myModal-header, .myModal-body{
+    background-color: black;
+    color: #ffffff;}
 /* ABSTRACTO - FIN */
 @media (min-width: 576px) {
     .galeria { display: grid;

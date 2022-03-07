@@ -513,81 +513,51 @@ footer a:hover, footer .navbar-dark .navbar-nav a.nav-link.active, .navbar-dark 
 
 /* FIGURATIVO - FIN */
 /* ABSTRACTO - INICIO */
-.abs-img1 {
-  grid-area: img1;
-  background-image: url(../imagenes/Abstracto/1.jpg);
-  background-position: center;
-  background-size: cover;
+img {
+  max-width: 100%;
 }
 
-.abs-img2 {
-  grid-area: img2;
-  background-image: url(../imagenes/Abstracto/12.jpg);
-  background-position: center;
-  background-size: cover;
+button img:hover, button .navbar-dark .navbar-nav img.nav-link.active, .navbar-dark .navbar-nav button img.nav-link.active {
+  opacity: 70%;
 }
 
-.abs-img3 {
-  grid-area: img3;
-  background-image: url(../imagenes/Abstracto/3.jpg);
-  background-position: center;
-  background-size: cover;
+.galeria-abs {
+  padding-top: 30px;
+  padding-bottom: 80px;
 }
 
-.abs-img9 {
-  grid-area: img9;
-  background-image: url(../imagenes/Abstracto/15.jpeg);
-  background-position: center;
-  background-size: cover;
+img {
+  width: 100%;
+  box-shadow: 3px 3px 3px #333;
 }
 
-.abs-img5 {
-  grid-area: img5;
-  background-image: url(../imagenes/Abstracto/11.jpg);
-  background-position: center;
-  background-size: cover;
+.btn-close {
+  background-image: url(../imagenes/closebutton.png);
 }
 
-.abs-img4 {
-  grid-area: img4;
-  background-image: url(../imagenes/Abstracto/2.jpg);
-  background-position: center;
-  background-size: cover;
+.modal-content {
+  border: none;
 }
 
-.abs-img6 {
-  grid-area: img6;
-  background-image: url(../imagenes/Abstracto/4.jpg);
-  background-position: center;
-  background-size: cover;
+.modal-body {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
 }
 
-.abs-img7 {
-  grid-area: img7;
-  background-image: url(../imagenes/Abstracto/13.jpg);
-  background-position: center;
-  background-size: cover;
+.modal-body .modal-img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
 }
 
-.abs-img8 {
-  grid-area: img8;
-  background-image: url(../imagenes/Abstracto/8.jpg);
-  background-position: center;
-  background-size: cover;
+.my-modal {
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
-.abs-img10 {
-  grid-area: img10;
-  background-image: url(../imagenes/Abstracto/9.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.abs-img11 {
-  grid-area: img11;
-  background-image: url(../imagenes/Abstracto/14.jpeg);
-  background-position: center;
-  background-size: cover;
+.myModal-header, .myModal-body {
+  background-color: black;
+  color: #ffffff;
 }
 
 /* ABSTRACTO - FIN */
