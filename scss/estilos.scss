@@ -87,7 +87,13 @@ header{
     #collapsibleNavbar{
         justify-content: flex-end;}
 }
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 #inicio{
+    @include flex-column-center;
     height: 100vh;
     width: 100%;
     margin-top: 100px;
@@ -96,9 +102,9 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     border: 10px solid $color;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
     align-items: center;}
     .inicio h1{
         text-align: center;
@@ -182,10 +188,14 @@ main {
     flex-direction: row;
     justify-content: space-around;
 }
+$estilos:(
+    centro: center,
+    margen: 30px,
+);
 .boton{
     display: flex;
-    justify-content: center;
-    margin: 30px;
+    justify-content: map-get($estilos, centro);
+    margin: map-get($estilos, margen);
 }
 .btn{
     background-color: $color1;
@@ -222,11 +232,6 @@ main {
   /* CAROUSEL - FIN */
 
   /* ACERCA DE - INICIO */
-.titulo-acercade{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;}
 .acercade{
     display: flex;
     flex-direction: column;
@@ -436,7 +441,7 @@ button img:hover {
 .galeria-abs{
     padding-top: 30px;
     padding-bottom: 80px;}
-    img{
+    .galeria-abs img{
         width: 100%;
         box-shadow: 3px 3px 3px #333;
     }
