@@ -10,6 +10,7 @@
     <link rel="icon" href="imagenes/logo.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/estilos.css">
 </head>
 <body>
@@ -47,7 +48,7 @@
         </div>
 	</header>
     <main class="container">
-        <section class="presentacion">
+        <section class="presentacion" data-aos="fade-up">
                 <h2 class="titulo">bienvenidos</h2>
                 <div class="imgpres" ><img src="imagenes/Abstracto/6.jpg" alt="img-presentacion"></div>
                 <div class="p">
@@ -55,23 +56,38 @@
                     Una obra de arte está a medio camino entre el artista y el espectador. El primero plasma, su pensamiento, su idea, sus sentimientos, su realidad y subjetividad. Pero su obra no estaría completa sin un sujeto que pueda apreciarla, contemplarla, vivenciarla, interpretarla desde su propia mirada, desde su propia experiencia. El trabajo del artista se completa en el espectador. Lo que cada uno experimenta al estar en presencia de una manifestación artística es absolutamente único y, por lo tanto, verdadero para cada persona. No hay lugar para grietas, todas las miradas serán verdaderas, porque la obra comunica a cada uno lo que cada uno es capaz de sentir, de interpretar, de vivir, más allá de lo que el propio autor haya pretendido comunicar.</p>
                 </div>
         </section>
-        <section>
-            <article class="neuroplasticidad">
-                <h4>Neuroplasticidad</h4>
-                <p>La neuroplasticidad es la habilidad del cerebro de cambiar tanto su estructura física como su organización funcional, en respuesta a una serie de experiencias, estímulos, y entrenamientos cognitivos, que favorecen nuevas interconexiones neuronales, y que refuerzan las conexiones ya existentes.<br>
-                Cada vez que se aprende algo, las propias neuronas forman redes para comunicarse y dar señales de una a otra, mediante sinapsis. Cuando se practica lo aprendido mejoran las comunicaciones entre esas neuronas, lo que facilita el mejor desarrollo de las tareas.</p>
-                <h4>Arte y neuroplasticidad </h4>
-                <p>¿Mondrian? ¿Liszt? ¿Botero? Más allá de un recreo estético y una actividad para entendidos, el arte es un ingrediente que nuestra mente necesita para estar y ser mucho mejor.<br>
-                Según estudios de la Universidad de Toronto, en apariencia, la apreciación del arte es un proceso biológico natural, para el que nuestro cerebro estaría diseñado.<br>
-                Los investigadores, encontraron que al observar pinturas y formarse una opinión sobre ellas, se activan numerosas partes del cerebro, como por ejemplo áreas relacionadas con el reconocimiento de objetos y escenas (obviamente), así como áreas relacionadas con las experiencias emocionales, el aprendizaje y la regulación de los movimientos. <br>
-                Cada expresión artística activa partes distintas del cerebro, como muestra este estudio, por lo que es una excelente forma de estimular nuestro intelecto y creatividad. Otra investigación, nos muestra que además se potencian las capacidades de resolución de problemas en los niños, y también, la memoria y la capacidad de aprendizaje. <br>
-                Las artes visuales, poseen grandes beneficios: mejoran la plasticidad cerebral, el coeficiente intelectual, y la capacidad de atención. Asimismo, reducen la impulsividad y mejoran el comportamiento en los niños. <br>
-                Y no sólo en el aspecto netamente académico. El arte mejora nuestras cualidades humanas. Por ejemplo, un estudio realizado en 10.000 estudiantes, indica que la apreciación del arte y las visitas a museos, incrementan la tolerancia, y otras investigaciones, señalan que el mero hecho de estar expuestos a una obra artística, libera las mismas sustancias en el cerebro, que cuando nos enamoramos.</p>
-            </article>
+        <section data-aos="fade-up">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">Neuroplasticidad</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            La <strong>neuroplasticidad</strong> es la habilidad del cerebro de cambiar tanto su estructura física como su organización funcional, en respuesta a una serie de experiencias, estímulos, y entrenamientos cognitivos, que favorecen nuevas interconexiones neuronales, y que refuerzan las conexiones ya existentes.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">Arte y neuroplasticidad</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                        ¿Mondrian? ¿Liszt? ¿Botero? Más allá de un recreo estético y una actividad para entendidos, el arte es un ingrediente que nuestra mente necesita para estar y ser mucho mejor.
+                        Según estudios de la Universidad de Toronto, en apariencia, la apreciación del arte es un proceso biológico natural, para el que nuestro cerebro estaría diseñado. <br>
+                        Los investigadores, encontraron que al observar pinturas y formarse una opinión sobre ellas, se activan numerosas partes del cerebro, como por ejemplo áreas relacionadas con el reconocimiento de objetos y escenas (obviamente), así como áreas relacionadas con las experiencias emocionales, el aprendizaje y la regulación de los movimientos. <br>
+                        Cada expresión artística activa partes distintas del cerebro, como muestra este estudio, por lo que es una excelente forma de estimular nuestro intelecto y creatividad. Otra investigación, nos muestra que además se potencian las capacidades de resolución de problemas en los niños, y también, la memoria y la capacidad de aprendizaje. <br>
+                        Las artes visuales, poseen grandes beneficios: mejoran la plasticidad cerebral, el coeficiente intelectual, y la capacidad de atención. Asimismo, reducen la impulsividad y mejoran el comportamiento en los niños. <br>
+                        Y no sólo en el aspecto netamente académico. El arte mejora nuestras cualidades humanas. Por ejemplo, un estudio realizado en 10.000 estudiantes, indica que la apreciación del arte y las visitas a museos, incrementan la tolerancia, y otras investigaciones, señalan que el mero hecho de estar expuestos a una obra artística, libera las mismas sustancias en el cerebro, que cuando nos enamoramos.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section>
+        <section class="trabajos" data-aos="fade-up">
             <h2 class="titulo">algunos trabajos</h2>
-            <article class="obras">
+            <article class="obras" data-aos="fade-up" data-aos-anchor-placement="top-center">
                 <div class="card text-white text-center bg-dark mb-3" style="width: 18rem;">
                     <img src="imagenes/Abstracto/8min.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -94,10 +110,10 @@
                     </div>
                 </div>
             </article>
-            <div class="boton">
+            <div class="boton" data-aos="fade-up">
                 <a href="pages/abstractos.html" class="btn">Ver más trabajos abstractos...</a>
             </div>
-            <article class="obras">
+            <article class="obras" data-aos="fade-up" data-aos-anchor-placement="top-center">
                 <div class="card text-white text-center bg-dark mb-3" style="width: 18rem;">
                     <img src="imagenes/Figurativo/5.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -120,12 +136,11 @@
                     </div>
                 </div>
             </article>
-            <div class="boton">
+            <div class="boton" data-aos="fade-up">
                 <a href="pages/figurativos.html" class="btn">Ver más trabajos figurativos...</a>
             </div>
-
         </section>
-        <section class="inicio-carousel">
+        <section class="inicio-carousel" data-aos="fade-up" data-aos-anchor-placement="top-center">
             <!-- CAROUSEL -->
             <div id="inicio-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <!-- INDICADORES -->
@@ -193,7 +208,12 @@
         </ul>
         <p><small>Camila Caresani - Todos los derechos reservados</small></p>
     </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({duration:1000});
+    </script>
 </body>
 </html>

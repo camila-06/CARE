@@ -205,6 +205,17 @@ $estilos:(
 .card:hover{
     box-shadow: 0 0.5rem 0.9rem 0 $ccolor1;
 }
+.accordion{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.accordion-button, .accordion-body{
+    background-color: $ccolor1;
+    color: $color0;
+}
+.trabajos{
+    border-top: 2px solid $color0;
+}
 
   /* CAROUSEL - INICIO */
 .inicio-carousel {

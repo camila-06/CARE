@@ -225,6 +225,20 @@ h4 {
   box-shadow: 0 0.5rem 0.9rem 0 #1a1919;
 }
 
+.accordion {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.accordion-button, .accordion-body {
+  background-color: #1a1919;
+  color: #ffffff;
+}
+
+.trabajos {
+  border-top: 2px solid #ffffff;
+}
+
 /* CAROUSEL - INICIO */
 .inicio-carousel {
   padding: 1.5rem;
