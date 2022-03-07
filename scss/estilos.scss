@@ -7,7 +7,13 @@ $color0: #ffffff;
 $color1: #ffe8c5;
 $color2: #d5b686;
 $color3: #6f4d18;
+$ccolor1: #1a1919;
+$ccolor2: #f37b0b;
+$ccolor3: #9e0909;
+$color10: #4A4F54;
 
+$font1: 'Mandali', sans-serif;
+$font2: 'Titan One', cursive;
 
 *{
     margin: 0;
@@ -15,8 +21,8 @@ $color3: #6f4d18;
 }
 
 body{
-    background-color: rgb(255, 232, 197);
-    font-family: 'Mandali', sans-serif;}
+    background-color: $color;
+    font-family: $font1;}
 
   /* HEADER - INICIO */
 header{
@@ -29,45 +35,51 @@ header{
             padding: 0;
             margin: 0;
             height: 100px;
-            background-image: linear-gradient(to bottom, $color2, $color1);}
+            // background-color: $color;
+            background-image: linear-gradient(to bottom, $color, $ccolor1);
+            // opacity: 80%;
+        }
             .navbar-brand{
                 padding: 0;
                 margin: 0;}
         .navbar-dark .navbar-nav .nav-link{
             color: $color0;
+            font-weight: bold;
             text-align: center;
             font-size: large;
             padding: 10px 16px;
             margin: 10px;}
         .navbar-dark .navbar-nav .nav-link:hover{
-            color: $color3;
+            color: $ccolor3;
             font-weight: bold;
             background-color: $color1;
             border-radius: 10px;}
+        .navbar-dark .navbar-nav .nav-link.active{
+            @extend .nav-link, :hover;}
         .nav-item{
             padding: 10px;}
             .dropdown-menu{
-                background-color: $color2;
+                background-color: $ccolor1;
                 border-radius: 10px;}
             .dropdown-item{
                 text-align: center;
                 color: $color0;}
             .dropdown-item:hover{
-                color: $color3;
+                color: $ccolor3;
                 font-weight: bold;
                 background-color: $color1;}
 
 @media (min-width: 0px) and (max-width: 767px){
     #collapsibleNavbar{
-        background-color: $color1;
+        background-color: $ccolor1;
         opacity: 95%;}
     .navbar-dark .navbar-nav .nav-link{
-        color: $color3;
+        color: $color0;
         font-weight: bold;}
     .navbar-dark .navbar-nav .nav-link:hover{
-        color: $color1;
+        color: $ccolor3;
         font-weight: bold;
-        background-color: $color3;}
+        background-color: $color1;}
     .nav-item{
         align-self: center;}
 }
@@ -75,54 +87,56 @@ header{
     #collapsibleNavbar{
         justify-content: flex-end;}
 }
+#inicio{
+    height: 100vh;
+    width: 100%;
+    margin-top: 100px;
+    background-image: url(../imagenes/Laotragrieta1.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 10px solid $color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+    .inicio h1{
+        text-align: center;
+        text-shadow: 2px 2px $color;
+        font-family: 'Luckiest Guy', cursive;
+        font-weight: 400;
+        font-size: 90px;
+        color: $color0;}
+    .inicio h2{
+        text-align: center;
+        text-shadow: 1.5px 1.5px $color;
+        font-size: 35px;
+        color: $color0;
+        font-style: italic;
+        text-decoration: overline;}
+    @media (min-width: 0px) and (max-width: 409px){
+    .inicio h1{
+        font-size: 75px;}
+    .inicio h2{
+        font-size: 20px;}
+    }
 
     /* HEADER - FIN */
 main {
     height: min-content;
     width: 100%;
+    color: $color0;
     display: flex;
     flex-direction: column;}
-    .inicio{
-        height: 700px;
-        width: 100%;
-        background-image: url(../imagenes/Laotragrieta1.jpeg);
-        background-size: cover;
-        background-position: center;
-        border: 10px solid $color;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;}
-        .inicio h1{
-            text-align: center;
-            text-shadow: 2px 2px $color;
-            font-family: 'Luckiest Guy', cursive;
-            font-weight: 400;
-            font-size: 90px;
-            color: $color0;}
-        .inicio h2{
-            text-align: center;
-            text-shadow: 1.5px 1.5px $color;
-            font-size: 35px;
-            color: $color0;
-            font-style: italic;
-            text-decoration: overline;}
-            
-@media (min-width: 0px) and (max-width: 409px){
-    .inicio h1{
-        font-size: 75px;}
-    .inicio h2{
-        font-size: 20px;}
-}
 .titulo{
     height: min-content;
-    font-family: 'Titan One', cursive;
+    font-family: $font2;
     font-variant: small-caps;
     font-weight: 400;
     font-size: 50px;
     text-align: center;
-    color: $color;
-    text-shadow: 2px 2px $color2;
+    color: $color0;
+    text-shadow: 2px 2px $ccolor3;
     margin: 10px;}
 .presentacion{
     height: min-content;
@@ -130,7 +144,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;}
+    justify-content: center;
+    border-bottom: 2px solid #ffffff;}
     .imgpres{
         display: flex;
         justify-content: center;}
@@ -138,16 +153,48 @@ main {
         max-height: 500px;
         max-width: 75%;
         margin: 25px;
-        border: 2px solid $color3;
-        box-shadow: 2px 2px $color2;}
+        // border: 2px solid $color3;
+        // box-shadow: 2px 2px $color2;
+    }
     .titulo{
         width: 100%;}
     .p {
         height: 100%;
         width: 50%;
+        font-size: large;
         text-align: justify;
         display: flex;
         align-self: center;}
+.neuroplasticidad{
+    @extend .p;
+    width: 100%;
+    flex-direction: column;
+    border-bottom: 2px solid $color0;
+}
+    h4{
+        padding-top: 5px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+.obras{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.btn{
+    background-color: $color1;
+    color: $ccolor3;
+    font-weight: bold;
+}
+.card:hover{
+    box-shadow: 0 0.5rem 0.9rem 0 $ccolor1;
+}
 
   /* CAROUSEL - INICIO */
 .inicio-carousel {
@@ -183,64 +230,70 @@ main {
 .acercade{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;}
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    height: fit-content;}
+video{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;}
 .expo1{
-    min-height: 200px;
-    min-width: 200px;
     grid-area: expo1;
-    background-image: url(../imagenes/expo.jpg);
+    background-image: url(../imagenes/Figurativo/4.jpg);
     background-position: center;
     background-size: cover;
-    border: 2px solid $color3;
-    box-shadow: 2px 2px $color2;}
+    border-radius: 10px;
+    // border: 2px solid $color3;
+    // box-shadow: 2px 2px $color2;
+}
 .text1{
     display: flex;
-    align-items: flex-start;
-    margin: 5%;
+    align-items: center;
+    color: $color0;
+    font-size: large;
     text-align: justify;}
 .expo2{
-    min-height: 200px;
-    min-width: 200px;
     grid-area: expo2;
-    background-image: url(../imagenes/expo2.jpg);
-    background-position: center;
-    background-size: cover;
-    border: 2px solid $color3;
-    box-shadow: 2px 2px $color2;}
+    // border: 2px solid $color3;
+    // box-shadow: 2px 2px $color2;
+}
 .text2{
     display: flex;
     flex-direction: column;
     overflow: auto;
     align-items: center;
-    margin: 5%;}
+    color: $color0;}
 .text2 ul{
     list-style-type: square;}
 
 @media (min-width: 576px) {
     .acercade{
-        height: 100vh;
+        height: fit-content;
         width: auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         grid-auto-flow: row;
         grid-template-areas:
-        "expo1"
         "text1"
-        "expo2"
-        "text2";}
+        "expo1"
+        "text2"
+        "expo2";
+    }
 }
 @media (min-width: 768px) {
     .acercade{
-        height: 100vh;
+        height: fit-content;
         width: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-auto-flow: row;
+        gap: 30px;
         grid-template-areas:
-        "expo1 text1"
-        "text2 expo2";}
+        "text1 expo1"
+        "expo2 text2";
+    }
 }
   /* ACERCA DE - FIN */
 
@@ -268,8 +321,8 @@ form{
 footer{
     height: auto;
     width: 100%;
-    border-top: 2px solid $color;
-    background-color: $color2;
+    // border-top: 2px solid $color;
+    background-image: linear-gradient(to top, $color, $ccolor1);
     color: $color0;
     padding-top: 20px;
     display: flex;
