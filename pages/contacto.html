@@ -39,41 +39,52 @@
             </div>
           </nav>
 	</header>
-    <main class="contacto">
+    <main id="contacto">
         <h1 class="titulo">Formulario de contacto:</h1>
-        <div class="form">
-            <form action="contacto.php" method="get" enctype="text/plain" autocomplete="on">
+        <div class="contacto d-flex justify-content-center">
+          <form action="contacto.php" method="get" enctype="text/plain" autocomplete="on">
+            <div class="row">
+              <div class="col-sm-6 mb-3">
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" placeholder="Ingresá tu nombre" required>
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresá tu nombre" required>
+              </div>
+              <div class="col-sm-6 mb-3">
                 <label for="apellido">Apellido:</label>
-                <input type="text" name="apellido" placeholder="Ingresá tu apellido" required>
-                <br>
-                <label for="telefono">Teléfono:</label>
-                <input type="number" name="telefono" placeholder="Ej: (011) 1111-2222" required>
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" name="email" placeholder="Ej.: hola@dominio.com" required>
-                <br>
-                <label for="preferencia">Preferís que te contactemos por:</label>
-                <input type="checkbox" name="preferencia">
-                <label for="preferencia">Teléfono</label>
-                <input type="checkbox" name="preferencia">
-                <label for="preferencia">Email</label>
-                <br>
+                <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Ingresá tu apellido" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Ej.: hola@dominio.com" required>
+            </div>
+            <hr class="mb-3">
+            <div class="row">
+              <div class="mb-3">
                 <label for="motivo">Motivo del contacto:</label>
-                <input type="radio" name="motivo">
-                <label for="motivo">Mayor información</label>
-                <input type="radio" name="motivo">
-                <label for="motivo">Comprar</label>
-                <input type="radio" name="motivo">
-                <label for="motivo">Otro</label>
-                <br>
-                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Escribí tu mensaje" required></textarea>
-                <br>
-                <input type="submit">
-                <input type="reset">
-            </form>
-        </div>  
+                <select class="custom-select d-block w-100" id="motivo" required>
+                  <option value="">Elegí una opción...</option>
+                  <option>Mayor información</option>
+                  <option>Comprar</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="mb-3 custom-control custom-checkbox">
+                <label for="email">Preferís que te contactemos por:</label>
+                <input type="checkbox" class="custom-control-input" name="preferencia" id="preferencia">
+                <label class="custom-control-label" for="preferencia">Teléfono</label>
+                <input type="checkbox" class="custom-control-input" name="preferencia" id="preferencia">
+                <label class="custom-control-label" for="preferencia">Email</label>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea class="form-control" name="mensaje" id="mensaje" rows="3" placeholder="Escribí tu mensaje" required></textarea>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <button class="btn btn-secondary btn-md btn-block" type="submit">Enviar</button>
+            <button class="btn btn-secondary btn-md btn-block" type="reset">Restablecer</button>
+          </form>
+        </div>
     </main>
     <footer>
         <ul>

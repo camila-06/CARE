@@ -31,12 +31,11 @@ header{
     .navbar{
         padding: 0;
         margin: 0;}
-        .container-fluid{
+        .navbar .container-fluid{
             padding: 0;
             margin: 0;
             height: 100px;
-            background-image: linear-gradient(to bottom, $color, $ccolor1);
-        }
+            background-image: linear-gradient(to bottom, $color, $ccolor1);}
             .navbar-brand{
                 padding: 0;
                 margin: 0;}
@@ -152,7 +151,7 @@ main {
     .titulo{
         width: 100%;}
     .p {
-        width: 850px;
+        width: 600px;
         font-size: large;
         text-align: justify;
         display: flex;
@@ -301,28 +300,25 @@ video{
   /* ACERCA DE - FIN */
 
   /* CONTACTO - INICIO */
-.contacto {
-    text-align: center;
+#contacto{
+    height: fit-content;
+    min-height: 100vh;
+    background-image: url(../imagenes/slide8.jpg);
+    background-position: center;
+    background-size: cover;
+}
+form {
+    background-color: #333333d2;
+    color: $color0;
     font-size: 18px;
-    display: flex;
-    flex-wrap: wrap;}
-.form{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;}
-form{
-    height: 50%;
-    margin: 10px;
-    padding: 10px;
-    background-color: rgba(213, 182, 134, 0.502);
-    box-shadow: 2px 2px $color3;
-    border-radius: 1.5%;}
+    border-radius: 1.5%;
+    padding: 15px;
+    box-shadow: 2px 2px 5px $color;}
 /* CONTACTO - FIN */
 
 /* FOOTER - INICIO */
 footer{
-    height: auto;
+    height: fit-content;
     width: 100%;
     background-image: linear-gradient(to top, $color, $ccolor1);
     color: $color0;
@@ -347,6 +343,7 @@ footer a:hover{
 /* ABSTRACTO - INICIO */
 #abs.container-fluid {
     height: fit-content;
+    margin-bottom: 20px;
 }
 #abs h2{
     background-image: url(../imagenes/Abstracto/fondo.jpg);
