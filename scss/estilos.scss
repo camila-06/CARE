@@ -5,26 +5,22 @@
 $color: #000000;
 $color0: #ffffff;
 $color1: #ffe8c5;
-$color2: #d5b686;
-$color3: #6f4d18;
-$ccolor1: #1a1919;
-$ccolor2: #f37b0b;
-$ccolor3: #9e0909;
-$color10: #4A4F54;
+$color2: #6f4d18;
+$color3: #9e0909;
+$color4: #1a1919;
 
+$font: 'Luckiest Guy', cursive;
 $font1: 'Mandali', sans-serif;
 $font2: 'Titan One', cursive;
 
 *{
     margin: 0;
-    padding: 0;
-}
-
+    padding: 0;}
 body{
     background-color: $color;
     font-family: $font1;}
 
-  /* HEADER - INICIO */
+    /* HEADER - INICIO */
 header{
     height: 100px;
     width: 100%;}
@@ -35,7 +31,7 @@ header{
             padding: 0;
             margin: 0;
             height: 100px;
-            background-image: linear-gradient(to bottom, $color, $ccolor1);}
+            background-image: linear-gradient(to bottom, $color, $color4);}
             .navbar-brand{
                 padding: 0;
                 margin: 0;}
@@ -47,7 +43,7 @@ header{
             padding: 10px 16px;
             margin: 10px;}
         .navbar-dark .navbar-nav .nav-link:hover{
-            color: $ccolor3;
+            color: $color3;
             font-weight: bold;
             background-color: $color1;
             border-radius: 10px;}
@@ -56,25 +52,25 @@ header{
         .nav-item{
             padding: 10px;}
             .dropdown-menu{
-                background-color: $ccolor1;
+                background-color: $color4;
                 border-radius: 10px;}
             .dropdown-item{
                 text-align: center;
                 color: $color0;}
             .dropdown-item:hover{
-                color: $ccolor3;
+                color: $color3;
                 font-weight: bold;
                 background-color: $color1;}
 
 @media (min-width: 0px) and (max-width: 767px){
     #collapsibleNavbar{
-        background-color: $ccolor1;
+        background-color: $color4;
         opacity: 95%;}
     .navbar-dark .navbar-nav .nav-link{
         color: $color0;
         font-weight: bold;}
     .navbar-dark .navbar-nav .nav-link:hover{
-        color: $ccolor3;
+        color: $color3;
         font-weight: bold;
         background-color: $color1;}
     .nav-item{
@@ -94,7 +90,7 @@ header{
     height: 100vh;
     width: 100%;
     margin-top: 100px;
-    background-image: url(../imagenes/Laotragrieta1.jpeg);
+    background-image: url(../imagenes/Laotragrieta.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -103,7 +99,7 @@ header{
     .inicio h1{
         text-align: center;
         text-shadow: 2px 2px $color;
-        font-family: 'Luckiest Guy', cursive;
+        font-family: $font;
         font-weight: 400;
         font-size: 90px;
         color: $color0;}
@@ -124,78 +120,86 @@ header{
 
 main {
     height: min-content;
-    width: 100%;
     color: $color0;
     display: flex;
     flex-direction: column;}
 .titulo{
     height: min-content;
+    width: auto;
     font-family: $font2;
     font-variant: small-caps;
     font-weight: 400;
     font-size: 50px;
     text-align: center;
     color: $color0;
-    text-shadow: 2px 2px $ccolor3;
-    margin: 10px;}
+    text-shadow: 2px 2px $color3;
+    padding: 10px;}
 .presentacion{
     height: min-content;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-around;
-    border-bottom: 2px solid #ffffff;}
+    border-bottom: 2px solid $color0;}
+    .presentacion #imgpres{
+        max-height: 600px;
+        width: auto;
+        padding: 25px;
+    }
     .presentacion img{
-        max-height: 500px;
-        margin: 25px;}
-    .titulo{
-        width: 100%;}
+        max-height: 100%;
+        max-width: 100%;}
     .p {
-        width: 600px;
         font-size: large;
+        line-height: 1.6;
         text-align: justify;
-        display: flex;
         align-self: center;}
+
+@media (max-width: 991px){
+    .presentacion{
+        flex-wrap: wrap;}
+}
 .neuroplasticidad{
     @extend .p;
-    width: 100%;
-    flex-direction: column;
-    border-bottom: 2px solid $color0;}
+    width: 100%;}
+    .accordion{
+        margin-top: 30px;
+        margin-bottom: 30px;}
+    .accordion-button, .accordion-body{
+        background-color: $color4;
+        color: $color0;} 
+    button.accordion-button{
+        background-color: $color1;
+        color: $color3;
+        font-weight: bold;
+        box-shadow: 2px 2px 5px $color2;}
+    .accordion-button:not(.collapsed) {
+        @extend button.accordion-button;}
+    .accordion-button:focus {
+        box-shadow: #9e09095d 0px 0px 0px 0.25rem;}
 
 .obras{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-}
-$estilos:(
-    centro: center,
-    margen: 30px,
-);
-.boton{
-    display: flex;
-    justify-content: map-get($estilos, centro);
-    margin: map-get($estilos, margen);
-}
-.btn{
-    background-color: $color1;
-    color: $ccolor3;
-    font-weight: bold;
-}
-.card:hover{
-    box-shadow: 0 0.5rem 0.9rem 0 $ccolor1;
-}
-.accordion{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.accordion-button, .accordion-body{
-    background-color: $ccolor1;
-    color: $color0;
-}
+    justify-content: space-around;}
+    .card:hover{
+        box-shadow: 0 0 0 0.25rem $color4;} 
+
+    $estilos:(
+        centro: center,
+        margen: 30px,
+    );
+    .boton{
+        display: flex;
+        justify-content: map-get($estilos, centro);
+        margin: map-get($estilos, margen);}
+        .btn{
+            background-color: $color1;
+            color: $color3;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px $color2;}
+
 .trabajos{
-    border-top: 2px solid $color0;
-}
+    border-top: 2px solid $color0;}
 
   /* CAROUSEL - INICIO */
 .inicio-carousel {
@@ -222,47 +226,42 @@ $estilos:(
     border-radius: 0.6rem;}
 
 .carousel-caption h3{
-    text-shadow: 2px 2px $color;
-}
+    text-shadow: 2px 2px $color;}
     /* CAROUSEL - FIN */
 
-
-  /* ACERCA DE - INICIO */
+    /* ACERCA DE - INICIO */
 .acercade{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding-bottom: 20px;
     height: fit-content;}
-
-video{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;}
-.expo1{
-    grid-area: expo1;
-    background-image: url(../imagenes/Figurativo/4.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-}
-.text1{
-    display: flex;
-    align-items: center;
-    color: $color0;
-    font-size: large;
-    text-align: justify;}
-.expo2{
-    grid-area: expo2;
-}
-.text2{
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-    align-items: center;
-    color: $color0;}
-.text2 ul{
-    list-style-type: square;}
+    .expo1{
+        grid-area: expo1;
+        background-image: url(../imagenes/Figurativo/4.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;}
+    .text1{
+        display: flex;
+        align-items: center;
+        color: $color0;
+        font-size: large;
+        text-align: justify;}
+    .expo2{
+        grid-area: expo2;}
+        video{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;}
+    .text2{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        color: $color0;}
+        .text2 ul{
+            list-style-type: square;}
 
 @media (max-width: 767px) {
     .acercade{
@@ -297,89 +296,87 @@ video{
         "expo2 text2";
     }
 }
-  /* ACERCA DE - FIN */
+    /* ACERCA DE - FIN */
 
-  /* CONTACTO - INICIO */
+    /* GALERIA - INICIO */
+#abs.container-fluid {
+    height: fit-content;
+    margin-bottom: 20px;}
+    .galeria{
+        padding-top: 30px;
+        margin-bottom: 50px;}
+        .galeria img{
+            box-shadow: 3px 3px 3px #333333;
+        }
+    img{
+        max-height: 100%;
+        max-width: 100%;}
+    button img:hover {
+        opacity: 70%;}
+    .my-modal{
+        background-color: rgba(0, 0, 0, 0.85);}
+        .modal-content{
+            border: none;}
+            .myModal-header, .myModal-body{
+                background-color: $color;
+                color: $color0;}
+                .btn-close{
+                    background-image: url(../imagenes/closebutton.png);}
+            .modal-body{
+                height: 80vh;
+                display: flex;
+                justify-content: center;}
+                .modal-body .modal-img{
+                    height: 100%;
+                    width: auto;
+                    object-fit: cover;}
+
+#abs h2{
+    background-image: url(../imagenes/Abstracto/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+    /* GALERIA - FIN */
+
+    /* CONTACTO - INICIO */
 #contacto{
     height: fit-content;
     min-height: 100vh;
-    background-image: url(../imagenes/slide8.jpg);
+    background-image: url(../imagenes/slide1.jpg);
     background-position: center;
-    background-size: cover;
-}
-form {
-    background-color: #333333d2;
-    color: $color0;
-    font-size: 18px;
-    border-radius: 1.5%;
-    padding: 15px;
-    box-shadow: 2px 2px 5px $color;}
+    background-size: cover;}
+    form {
+        background-color: #333333d2;
+        color: $color0;
+        font-size: 18px;
+        border-radius: 1.5%;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 5px $color;}
 /* CONTACTO - FIN */
 
 /* FOOTER - INICIO */
 footer{
     height: fit-content;
     width: 100%;
-    background-image: linear-gradient(to top, $color, $ccolor1);
+    background-image: linear-gradient(to top, $color, $color4);
     color: $color0;
     padding-top: 20px;
     display: flex;
     flex: wrap;
     flex-direction: column;
-    align-items: center;
-}
-footer ul{
-    display: flex;
-    justify-content: center;}
-footer li{
-    list-style: none;
-    padding-right: 16px;}
-footer a{
-    display: flex;}
-footer a:hover{
-    transform: scale(1.2);}
+    align-items: center;}
+    footer ul{
+        display: flex;
+        justify-content: center;}
+    footer li{
+        list-style: none;
+        padding-right: 16px;}
+    footer a{
+        display: flex;}
+    footer a:hover{
+        transform: scale(1.2);}
 /* FOOTER - FIN */
-
-/* ABSTRACTO - INICIO */
-#abs.container-fluid {
-    height: fit-content;
-    margin-bottom: 20px;
-}
-#abs h2{
-    background-image: url(../imagenes/Abstracto/fondo.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-img{
-    max-width: 100%;}
-button img:hover {
-    opacity: 70%;}
-.galeria{
-    padding-top: 30px;
-    padding-bottom: 80px;}
-    .galeria img{
-        width: 100%;
-        box-shadow: 3px 3px 3px #333;
-    }
-.btn-close{
-    background-image: url(../imagenes/closebutton.png);}
-.modal-content{
-    border: none;}
-.modal-body{
-    height: 80vh;
-    display: flex;
-    justify-content: center;}
-.modal-body .modal-img{
-    height: 100%;
-    width: auto;
-    object-fit: cover;}
-.my-modal{
-    background-color: rgba(0, 0, 0, 0.85);}
-.myModal-header, .myModal-body{
-    background-color: black;
-    color: #ffffff;}
-/* ABSTRACTO - FIN */

@@ -81,7 +81,7 @@ header {
   height: 100vh;
   width: 100%;
   margin-top: 100px;
-  background-image: url(../imagenes/Laotragrieta1.jpeg);
+  background-image: url(../imagenes/Laotragrieta.jpeg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -91,7 +91,7 @@ header {
 .inicio h1 {
   text-align: center;
   text-shadow: 2px 2px #000000;
-  font-family: 'Luckiest Guy', cursive;
+  font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-size: 90px;
   color: #ffffff; }
@@ -113,13 +113,13 @@ header {
 /* HEADER - FIN */
 main {
   height: min-content;
-  width: 100%;
   color: #ffffff;
   display: flex;
   flex-direction: column; }
 
 .titulo {
   height: min-content;
+  width: auto;
   font-family: "Titan One", cursive;
   font-variant: small-caps;
   font-weight: 400;
@@ -127,40 +127,61 @@ main {
   text-align: center;
   color: #ffffff;
   text-shadow: 2px 2px #9e0909;
-  margin: 10px; }
+  padding: 10px; }
 
 .presentacion {
   height: min-content;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   justify-content: space-around;
   border-bottom: 2px solid #ffffff; }
 
-.presentacion img {
-  max-height: 500px;
-  margin: 25px; }
+.presentacion #imgpres {
+  max-height: 600px;
+  width: auto;
+  padding: 25px; }
 
-.titulo {
-  width: 100%; }
+.presentacion img {
+  max-height: 100%;
+  max-width: 100%; }
 
 .p, .neuroplasticidad {
-  width: 600px;
   font-size: large;
+  line-height: 1.6;
   text-align: justify;
-  display: flex;
   align-self: center; }
 
+@media (max-width: 991px) {
+  .presentacion {
+    flex-wrap: wrap; } }
+
 .neuroplasticidad {
-  width: 100%;
-  flex-direction: column;
-  border-bottom: 2px solid #ffffff; }
+  width: 100%; }
+
+.accordion {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.accordion-button, .accordion-body {
+  background-color: #1a1919;
+  color: #ffffff; }
+
+button.accordion-button, .accordion-button:not(.collapsed) {
+  background-color: #ffe8c5;
+  color: #9e0909;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px #6f4d18; }
+
+.accordion-button:focus {
+  box-shadow: #9e09095d 0px 0px 0px 0.25rem; }
 
 .obras {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around; }
+
+.card:hover, .navbar-dark .navbar-nav .card.active.nav-link {
+  box-shadow: 0 0 0 0.25rem #1a1919; }
 
 .boton {
   display: flex;
@@ -170,18 +191,8 @@ main {
 .btn {
   background-color: #ffe8c5;
   color: #9e0909;
-  font-weight: bold; }
-
-.card:hover, .navbar-dark .navbar-nav .card.active.nav-link {
-  box-shadow: 0 0.5rem 0.9rem 0 #1a1919; }
-
-.accordion {
-  margin-top: 30px;
-  margin-bottom: 30px; }
-
-.accordion-button, .accordion-body {
-  background-color: #1a1919;
-  color: #ffffff; }
+  font-weight: bold;
+  box-shadow: 2px 2px 5px #6f4d18; }
 
 .trabajos {
   border-top: 2px solid #ffffff; }
@@ -225,11 +236,6 @@ main {
   padding-bottom: 20px;
   height: fit-content; }
 
-video {
-  width: 100%;
-  height: auto;
-  border-radius: 10px; }
-
 .expo1 {
   grid-area: expo1;
   background-image: url(../imagenes/Figurativo/4.jpg);
@@ -247,10 +253,15 @@ video {
 .expo2 {
   grid-area: expo2; }
 
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; }
+
 .text2 {
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  overflow: hidden;
   align-items: center;
   color: #ffffff; }
 
@@ -282,11 +293,63 @@ video {
     grid-template-areas: "text1 expo1" "expo2 text2"; } }
 
 /* ACERCA DE - FIN */
+/* GALERIA - INICIO */
+#abs.container-fluid {
+  height: fit-content;
+  margin-bottom: 20px; }
+
+.galeria {
+  padding-top: 30px;
+  margin-bottom: 50px; }
+
+.galeria img {
+  box-shadow: 3px 3px 3px #333333; }
+
+img {
+  max-height: 100%;
+  max-width: 100%; }
+
+button img:hover, button .navbar-dark .navbar-nav img.active.nav-link, .navbar-dark .navbar-nav button img.active.nav-link {
+  opacity: 70%; }
+
+.my-modal {
+  background-color: rgba(0, 0, 0, 0.85); }
+
+.modal-content {
+  border: none; }
+
+.myModal-header, .myModal-body {
+  background-color: #000000;
+  color: #ffffff; }
+
+.btn-close {
+  background-image: url(../imagenes/closebutton.png); }
+
+.modal-body {
+  height: 80vh;
+  display: flex;
+  justify-content: center; }
+
+.modal-body .modal-img {
+  height: 100%;
+  width: auto;
+  object-fit: cover; }
+
+#abs h2 {
+  background-image: url(../imagenes/Abstracto/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/* GALERIA - FIN */
 /* CONTACTO - INICIO */
 #contacto {
   height: fit-content;
   min-height: 100vh;
-  background-image: url(../imagenes/slide8.jpg);
+  background-image: url(../imagenes/slide1.jpg);
   background-position: center;
   background-size: cover; }
 
@@ -296,6 +359,7 @@ form {
   font-size: 18px;
   border-radius: 1.5%;
   padding: 15px;
+  margin-bottom: 20px;
   box-shadow: 2px 2px 5px #000000; }
 
 /* CONTACTO - FIN */
@@ -326,55 +390,3 @@ footer a:hover, footer .navbar-dark .navbar-nav a.active.nav-link, .navbar-dark 
   transform: scale(1.2); }
 
 /* FOOTER - FIN */
-/* ABSTRACTO - INICIO */
-#abs.container-fluid {
-  height: fit-content;
-  margin-bottom: 20px; }
-
-#abs h2 {
-  background-image: url(../imagenes/Abstracto/fondo.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-img {
-  max-width: 100%; }
-
-button img:hover, button .navbar-dark .navbar-nav img.active.nav-link, .navbar-dark .navbar-nav button img.active.nav-link {
-  opacity: 70%; }
-
-.galeria {
-  padding-top: 30px;
-  padding-bottom: 80px; }
-
-.galeria img {
-  width: 100%;
-  box-shadow: 3px 3px 3px #333; }
-
-.btn-close {
-  background-image: url(../imagenes/closebutton.png); }
-
-.modal-content {
-  border: none; }
-
-.modal-body {
-  height: 80vh;
-  display: flex;
-  justify-content: center; }
-
-.modal-body .modal-img {
-  height: 100%;
-  width: auto;
-  object-fit: cover; }
-
-.my-modal {
-  background-color: rgba(0, 0, 0, 0.85); }
-
-.myModal-header, .myModal-body {
-  background-color: black;
-  color: #ffffff; }
-
-/* ABSTRACTO - FIN */
